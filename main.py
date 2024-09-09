@@ -4,16 +4,11 @@ import time
 import fitz
 import subprocess
 import os
-import pypandoc
-from pyth.plugins import plaintext
-from io import BytesIO
-from langchain_community.document_loaders import PyPDFLoader
 from langchain import OpenAI
 from langchain.schema import Document
 from langchain.chains import RetrievalQA
 from langchain.chains.qa_with_sources.loading import load_qa_with_sources_chain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import UnstructuredURLLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 
@@ -65,7 +60,6 @@ uploaded_file = st.sidebar.file_uploader("Upload a file", type=["txt", "pdf", "d
 process_docs_clicked = st.sidebar.button("Process Docs")
 
 if uploaded_file is not None:
-    st.session_state.messages = []
     file_type = uploaded_file.type
     file_content=""
     if file_type == "application/pdf":
@@ -80,11 +74,12 @@ if uploaded_file is not None:
             file_content = uploaded_file.read().decode('ISO-8859-1')
 
 #Setting up LLM model
-llm=OpenAI (temperature = 0.7, max_tokens = 500)
+llm=OpenAI (temperature = 0.9, max_tokens = 500)
 main_placefolder = st.empty()
 
 #Processing Docs if button is clicked
 if process_docs_clicked and file_content:
+    st.session_state.messages = []
     main_placefolder.text("Data Loading... Started... ✅ ✅ ✅")
     # Step to split the text into chunks
     text_splitter = RecursiveCharacterTextSplitter(
@@ -101,6 +96,7 @@ if process_docs_clicked and file_content:
     time.sleep(2)
     # Save the FAISS index locally creating faiss_store dir. This allows you to persist the index so that it can be reloaded later without needing to recompute the embeddings and rebuild the index.
     vectorstore_openai.save_local("faiss_store")
+    main_placefolder.text("Embedding vector index saved locally... ✅ ✅ ✅")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -120,7 +116,7 @@ if prompt := st.chat_input("What is up?"):
     # Loading vector index
     vectorstore = FAISS.load_local("faiss_store", OpenAIEmbeddings(), allow_dangerous_deserialization=True)
     chain = RetrievalQA.from_llm(llm = llm, retriever = vectorstore.as_retriever())
-    result = chain({"query": prompt}, return_only_outputs=True)  #{"answer":"", "sources":[]}
+    result = chain({"query": prompt}, return_only_outputs=True)  # {"answer":"", "sources":[]}
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
         st.markdown(result['result'])
