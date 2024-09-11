@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 import time
-import fitz
+import pymupdf as fitz
 import subprocess
 import os
 from langchain import OpenAI
@@ -55,53 +55,55 @@ def extract_text_from_doc(doc_file):
 st.title("SmartDoc Assistant 🤖")
 st.sidebar.title("Documents Upload")
 
-#Input Docs from sidebar
-uploaded_file = st.sidebar.file_uploader("Upload a file", type=["txt", "pdf", "doc"])
-process_docs_clicked = st.sidebar.button("Process Docs")
-
-if uploaded_file is not None:
-    file_type = uploaded_file.type
-    file_content=""
-    if file_type == "application/pdf":
-        file_content = extract_text_from_pdf(uploaded_file)
-    elif file_type == "application/msword":
-        file_content = extract_text_from_doc(uploaded_file)
-    elif file_type == "text/plain":
-        # Handle text files with different encodings if utf-8 fails
-        try:
-            file_content = uploaded_file.read().decode('utf-8')
-        except UnicodeDecodeError:
-            file_content = uploaded_file.read().decode('ISO-8859-1')
-
 #Setting up LLM model
 llm=OpenAI (temperature = 0.9, max_tokens = 500)
 main_placefolder = st.empty()
 
-#Processing Docs if button is clicked
-if process_docs_clicked and file_content:
-    st.session_state.messages = []
-    main_placefolder.text("Data Loading... Started... ✅ ✅ ✅")
-    # Step to split the text into chunks
-    text_splitter = RecursiveCharacterTextSplitter(
-        separators=['\n\n', '\n', '.', '.'],
-        chunk_size = 1000
-    )
-    main_placefolder.text("Text splitter... Started... ✅ ✅ ✅")
-    docs = text_splitter.split_text(file_content)
-    documents = [Document(page_content=chunk) for chunk in docs]
-    # Step to embed the text and save it to FAISS index
-    embeddings = OpenAIEmbeddings()
-    vectorstore_openai = FAISS.from_documents(documents, embeddings)
-    main_placefolder.text("Embedding vector index build in progress... ✅ ✅ ✅")
-    time.sleep(2)
-    # Save the FAISS index locally creating faiss_store dir. This allows you to persist the index so that it can be reloaded later without needing to recompute the embeddings and rebuild the index.
-    vectorstore_openai.save_local("faiss_store")
-    main_placefolder.text("Embedding vector index saved locally... ✅ ✅ ✅")
+#Input Docs from sidebar
+uploaded_file = st.sidebar.file_uploader("Upload a file", type=["txt", "pdf", "doc"])
+process_docs_clicked = st.sidebar.button("Process Docs")
+
+if process_docs_clicked:
+    if uploaded_file is None:
+        st.error("Please upload a file first... ❌ ❌ ❌")
+    else:
+        file_type = uploaded_file.type
+        file_content=""
+        if file_type == "application/pdf":
+            file_content = extract_text_from_pdf(uploaded_file)
+        elif file_type == "application/msword":
+            file_content = extract_text_from_doc(uploaded_file)
+        elif file_type == "text/plain":
+            # Handle text files with different encodings if utf-8 fails
+            try:
+                file_content = uploaded_file.read().decode('utf-8')
+            except UnicodeDecodeError:
+                file_content = uploaded_file.read().decode('ISO-8859-1')
+
+        #Processing Docs if button is clicked
+        if process_docs_clicked and file_content:
+            st.session_state.messages = []
+            main_placefolder.text("Data Loading... Started... ✅ ✅ ✅")
+            # Step to split the text into chunks
+            text_splitter = RecursiveCharacterTextSplitter(
+                separators=['\n\n', '\n', '.', '.'],
+                chunk_size = 1000
+            )
+            main_placefolder.text("Text splitter... Started... ✅ ✅ ✅")
+            docs = text_splitter.split_text(file_content)
+            documents = [Document(page_content=chunk) for chunk in docs]
+            # Step to embed the text and save it to FAISS index
+            embeddings = OpenAIEmbeddings()
+            vectorstore_openai = FAISS.from_documents(documents, embeddings)
+            main_placefolder.text("Embedding vector index build in progress... ✅ ✅ ✅")
+            time.sleep(2)
+            # Save the FAISS index locally creating faiss_store dir. This allows you to persist the index so that it can be reloaded later without needing to recompute the embeddings and rebuild the index.
+            vectorstore_openai.save_local("faiss_store")
+            main_placefolder.text("Embedding vector index saved locally... ✅ ✅ ✅")
 
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):

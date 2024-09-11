@@ -1,6 +1,9 @@
 fitz==0.0.1.dev2
 langchain==0.2.16
+langchain_community
 python-dotenv==1.0.1
 streamlit==1.38.0
 faiss-cpu==1.7.2
 OpenAI == 0.28.0
+PyMuPDF
+tiktoken
