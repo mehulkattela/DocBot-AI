@@ -11,6 +11,7 @@ DocBot-AI is a sophisticated application designed to process various document fo
 - **Embedding Generation:** Uses OpenAI embeddings to create vector representations.
 - **Vector Indexing:** Stores vectors in a FAISS index for quick searches.
 - **Contextual Querying:** Provides answers to user queries based on document content.
+- **RAG (Retrieval-Augmented Generation):** Retrieves relevant document chunks from FAISS and augments LLM responses with context from the original documents.
 - **Persistent Storage:** Saves FAISS index locally for state retention and improved performance.
 ### **Project Structure:**
 ```
