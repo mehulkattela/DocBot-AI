@@ -1,0 +1,120 @@
+2024-09-21 21:06:20,076 - INFO - Environment variables loaded.
+2024-09-21 21:06:52,640 - INFO - Environment variables loaded.
+2024-09-21 21:06:54,305 - INFO - Environment variables loaded.
+2024-09-21 21:06:54,328 - INFO - Uploaded file type: text/plain
+2024-09-21 21:06:54,328 - INFO - Processing the uploaded document.
+2024-09-21 21:06:54,332 - INFO - Text splitting completed.
+2024-09-21 21:06:55,751 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:06:55,868 - INFO - Loading faiss.
+2024-09-21 21:06:55,896 - INFO - Successfully loaded faiss.
+2024-09-21 21:07:08,975 - INFO - Environment variables loaded.
+2024-09-21 21:07:08,999 - INFO - User input received: Hi
+2024-09-21 21:07:09,331 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:07:10,076 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:07:10,085 - INFO - Response generated for user query.
+2024-09-21 21:07:21,923 - INFO - Environment variables loaded.
+2024-09-21 21:07:21,956 - INFO - User input received: who is the author of the book?
+2024-09-21 21:07:22,653 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:07:23,563 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:07:23,566 - INFO - Response generated for user query.
+2024-09-21 21:07:49,074 - INFO - Environment variables loaded.
+2024-09-21 21:07:49,105 - INFO - User input received: what is the book about?
+2024-09-21 21:07:49,583 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:07:51,206 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:07:51,208 - INFO - Response generated for user query.
+2024-09-21 21:11:12,880 - INFO - Environment variables loaded.
+2024-09-21 21:11:19,110 - INFO - Environment variables loaded.
+2024-09-21 21:11:20,035 - INFO - Environment variables loaded.
+2024-09-21 21:11:20,061 - INFO - Uploaded file type: text/plain
+2024-09-21 21:11:20,061 - INFO - Processing the uploaded document.
+2024-09-21 21:11:20,066 - INFO - Text splitting completed.
+2024-09-21 21:11:21,640 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:11:21,921 - INFO - Loading faiss.
+2024-09-21 21:11:21,944 - INFO - Successfully loaded faiss.
+2024-09-21 21:11:29,005 - INFO - Environment variables loaded.
+2024-09-21 21:11:29,027 - INFO - User input received: Hello brother
+2024-09-21 21:11:29,344 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:11:30,753 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:11:30,767 - INFO - Response generated for user query: {'result': " I don't have enough context to answer your question. Can you provide more information or clarify?"}
+2024-09-21 21:11:35,819 - INFO - Environment variables loaded.
+2024-09-21 21:11:35,841 - INFO - User input received: Hello
+2024-09-21 21:11:36,131 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:11:36,696 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:11:36,700 - INFO - Response generated for user query: {'result': ' Hello! Is there something specific you need assistance with?'}
+2024-09-21 21:11:43,690 - INFO - Environment variables loaded.
+2024-09-21 21:11:43,714 - INFO - User input received: what is the books title?
+2024-09-21 21:11:43,981 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:11:44,781 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:11:44,783 - INFO - Response generated for user query: {'result': ' The title of this book is "The art of money getting" or "golden rules for making money" by P. T. Barnum.'}
+2024-09-21 21:15:37,562 - INFO - Environment variables loaded.
+2024-09-21 21:15:42,774 - INFO - Environment variables loaded.
+2024-09-21 21:15:43,549 - INFO - Environment variables loaded.
+2024-09-21 21:15:43,569 - INFO - Uploaded file type: text/plain
+2024-09-21 21:15:43,569 - INFO - Processing the uploaded document.
+2024-09-21 21:15:43,573 - INFO - Text splitting completed.
+2024-09-21 21:15:44,865 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:15:45,202 - INFO - Loading faiss.
+2024-09-21 21:15:45,227 - INFO - Successfully loaded faiss.
+2024-09-21 21:15:48,947 - INFO - Environment variables loaded.
+2024-09-21 21:15:48,972 - INFO - User input received: Hi
+2024-09-21 21:15:49,327 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:15:49,981 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:15:49,997 - INFO - Response generated for user query: {'result': ' Hi there! How can I assist you today?'}
+2024-09-21 21:16:33,964 - INFO - Environment variables loaded.
+2024-09-21 21:16:33,990 - INFO - User input received: Who is the author of the book?
+2024-09-21 21:16:34,314 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:16:34,898 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:16:34,901 - INFO - Response generated for user query: {'result': ' P.T. Barnum'}
+2024-09-21 21:16:42,458 - INFO - Environment variables loaded.
+2024-09-21 21:16:42,479 - INFO - User input received: what is the book about?
+2024-09-21 21:16:42,756 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:16:43,358 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:16:43,361 - INFO - Response generated for user query: {'result': ' The book is about tips and strategies for making money, written by P.T. Barnum.'}
+2024-09-21 21:17:26,076 - INFO - Environment variables loaded.
+2024-09-21 21:17:26,130 - INFO - User input received: what are the highlights of the book/
+2024-09-21 21:17:26,453 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:17:28,134 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:17:28,136 - INFO - Response generated for user query: {'result': '\nUnfortunately, as an AI, I do not have the ability to read and summarize books. However, based on the context provided, the book appears to be a guide on how to make money and achieve financial independence. It emphasizes the importance of tracking expenses and distinguishing between necessities and luxuries, as well as studying human nature and having determination and self-reliance. It also discusses the opportunities for making money in the United States and the idea that anyone can achieve success if they are willing to work hard and take advantage of available avenues. '}
+2024-09-21 21:17:41,236 - INFO - Environment variables loaded.
+2024-09-21 21:17:41,260 - INFO - User input received: what is the summary of the book?
+2024-09-21 21:17:41,615 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:17:42,955 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:17:42,968 - INFO - Response generated for user query: {'result': '\nThe book is about the art of making money and provides advice and tips on how to become financially successful. It emphasizes the importance of hard work, determination, and wise investments, while cautioning against risky behaviors and reckless spending. The author also encourages the reader to study human nature and to be aware of societal pressures and expectations. Overall, the book promotes the idea that anyone can attain wealth and financial independence with the right mindset and strategies.'}
+2024-09-21 21:17:57,095 - INFO - Environment variables loaded.
+2024-09-21 21:17:57,129 - INFO - User input received: how much did the sofa cost?
+2024-09-21 21:17:57,464 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:17:58,650 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:17:58,656 - INFO - Response generated for user query: {'result': ' It is not specified in the context.'}
+2024-09-21 21:21:17,561 - INFO - Environment variables loaded.
+2024-09-21 21:21:36,382 - INFO - Environment variables loaded.
+2024-09-21 21:21:37,422 - INFO - Environment variables loaded.
+2024-09-21 21:21:37,435 - INFO - Uploaded file type: application/pdf
+2024-09-21 21:21:37,435 - INFO - Starting to extract text from PDF.
+2024-09-21 21:21:37,475 - INFO - Completed text extraction from PDF.
+2024-09-21 21:21:37,475 - INFO - Processing the uploaded document.
+2024-09-21 21:21:37,476 - INFO - Text splitting completed.
+2024-09-21 21:21:37,965 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:21:47,896 - INFO - Environment variables loaded.
+2024-09-21 21:21:47,915 - INFO - User input received: what is the pdf about?
+2024-09-21 21:21:48,235 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:21:48,754 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:21:48,763 - INFO - Response generated for user query: {'result': " I don't know."}
+2024-09-21 21:22:00,261 - INFO - Environment variables loaded.
+2024-09-21 21:22:00,298 - INFO - User input received: what's in the pdf?
+2024-09-21 21:22:00,600 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:22:01,245 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:22:01,248 - INFO - Response generated for user query: {'result': ' The PDF likely contains information about account and billing details for gas service from Connecticut Natural Gas Corporation.'}
+2024-09-21 21:22:07,133 - INFO - Environment variables loaded.
+2024-09-21 21:22:13,377 - INFO - Environment variables loaded.
+2024-09-21 21:22:14,156 - INFO - Environment variables loaded.
+2024-09-21 21:22:14,179 - INFO - Uploaded file type: application/msword
+2024-09-21 21:22:14,179 - INFO - Starting to extract text from DOC.
+2024-09-21 21:22:14,321 - INFO - Text extraction from DOC completed successfully.
+2024-09-21 21:22:14,321 - INFO - Processing the uploaded document.
+2024-09-21 21:22:14,323 - INFO - Text splitting completed.
+2024-09-21 21:22:14,909 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:22:27,846 - INFO - Environment variables loaded.
+2024-09-21 21:22:27,875 - INFO - User input received: what is the document about?
+2024-09-21 21:22:28,121 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-09-21 21:22:28,778 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2024-09-21 21:22:28,781 - INFO - Response generated for user query: {'result': ' The document is about the topic of Lorem ipsum and includes various pieces of information and context related to it.'}
